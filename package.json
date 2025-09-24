@@ -59,6 +59,7 @@
     "test-versions": "bash -c '. \"$NVM_DIR/nvm.sh\" && nvm use 20 && pnpm test && nvm use 22 && pnpm test && nvm use 24 && pnpm test'",
     "clean": "rm -rf dist node_modules",
     "build": "pnpm exec tsc --build",
+    "prepare": "tsc --build",
     "make": "pnpm clean && pnpm install && pnpm build && pnpm test",
     "tsc": "pnpm exec tsc --watch  --pretty --preserveWatchOutput",
     "prepublishOnly": "pnpm test-all && rm -f dist/*.tsbuildinfo dist/.tsconfig-bootstrap* && rm -rf dist/test"
